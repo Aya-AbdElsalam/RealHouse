@@ -1,3 +1,23 @@
+# About the Project
+
+Real House is a comprehensive real estate website offering property listings for sales and rentals. It features detailed descriptions, high-quality images, virtual tours, and efficient communication tools for buyers. With advanced search filters and market insights, Real House simplifies finding the perfect property.
+<br />
+
+👉 **Live Demo :** https://real-house-eight.vercel.app/
+
+# The site
+![realhouse1](https://github.com/Aya-AbdElsalam/RealHouse/assets/152267387/7880616f-e498-4872-8e70-1d3db12bffa0)
+![realhouse](https://github.com/Aya-AbdElsalam/RealHouse/assets/152267387/98aa72d2-85fc-43b7-9341-77cf52a0b354)
+
+
+
+# Tools
+- Nuxt js
+- tailwindcss primevue
+- firebase
+- oh-vue-icons
+- pinia
+  
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
