@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="flex flex-col items-center justify-center forRent py-36 md:py-24"
-    :style="' background:white; clip-path:polygon(100% 0%, 100% 35%, 151% 85%, 0px 100%, 0 14%)'"
-  >
+  <div class="flex flex-col items-center justify-center forRent">
     <p class="text-secondary-color text-[15px] p-0 m-0 font-bold">Check out</p>
     <p class="text-[36px] p-0 m-0">Featured Properties</p>
     <p class="text-text-secondary text-[15px] p-0 m-0">

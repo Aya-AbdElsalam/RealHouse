@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col items-center justify-center forRent"
+    class="flex flex-col items-center justify-center forRent w-full"
     :class="'py-' + py + ' md:py-' + pyMd"
     :style="
       bg == 'white' &&
@@ -14,7 +14,41 @@
     <p class="text-text-secondary text-[15px] p-0 m-0">
       {{ p2 }}
     </p>
+    <div v-if="allow == false && title == 'Near you'">
+      <h2 class="font-bold text-[20px] mt-3 text-center text-secondary-color">
+        Allow the site to access your location to find nearby properties.
+      </h2>
+      <img
+        src="../public/images/allowlocation.png"
+        class="w-full h-[340px] object-cover"
+        width="100%"
+        height="300px"
+      />
+    </div>
+    <div
+      v-else-if="
+        allow == true && title == 'Near you' && realEstate?.length == 0
+      "
+      class="flex flex-col items-center text-center"
+    >
+      <h2 class="font-bold text-[20px] mt-3 text-center text-secondary-color">
+        There are no properties near you.
+      </h2>
+
+      <img
+        src="../public/images/notAvailable.png"
+        class="w-full h-[340px] object-cover"
+        width="100%"
+        height="300px"
+      />
+      <NuxtLink
+        class="font-bold text-[19px] mt-3 text-white px-6 py-1 hover:bg-primary-color/80 bg-primary-color rounded-md"
+        to="/realEstate"
+        >Explore RealeEstates</NuxtLink
+      >
+    </div>
     <Carousel
+      v-else
       :value="realEstate || [1, 2, 3, 4, 5]"
       :responsiveOptions="responsiveOptions"
       :numScroll="1"
@@ -69,6 +103,7 @@ const responsiveOptions = ref([
     numScroll: 1,
   },
 ]);
+const allow = inject("allow");
 </script>
 <style>
 [data-pc-section="item"] > div {

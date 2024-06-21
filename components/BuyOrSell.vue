@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative -top-[103px]"
+    class="relative"
     style="clip-path: polygon(100% 0%, 100% 35%, 151% 85%, 0px 100%, 0 14%)"
   >
     <img
