@@ -22,7 +22,7 @@
       </h2>
       <img
         src="../public/images/allowlocation.png"
-        class="w-full h-[340px] object-cover"
+        class="w-full h-[250px] md:h-[300px] object-cover"
         width="100%"
         height="300px"
       />
@@ -41,12 +41,12 @@
 
       <img
         src="../public/images/notAvailable.png"
-        class="w-full h-[340px] object-cover"
+        class="w-full h-[250px] md:h-[300px] object-cover"
         width="100%"
         height="300px"
       />
       <NuxtLink
-        class="font-bold text-[19px] mt-3 text-white px-6 py-1 hover:bg-primary-color/80 bg-primary-color rounded-md"
+        class="font-bold text-[19px] mt-3 text-white px-6 py-1 hover:bg-primary-color/80 bg-primary-color rounded-md w-full"
         to="/realEstate"
         >Explore RealeEstates</NuxtLink
       >
