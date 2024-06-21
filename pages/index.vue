@@ -12,13 +12,12 @@
       pyMd="0"
     />
     <RealEstateSection
+      class="py-36 md:py-24"
       :realEstate="Recent"
       title="Recent"
       p1="Properties"
       p2="Check out some of our latest properties."
       bg="white"
-      py="36"
-      pyMd="24"
     />
     <FeaturedRealEstate :realEstate="Featured" />
     <RealEstateSection

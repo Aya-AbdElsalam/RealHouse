@@ -15,7 +15,9 @@
       {{ p2 }}
     </p>
     <div v-if="allow == false && title == 'Near you'">
-      <h2 class="font-bold text-[20px] mt-3 text-center text-secondary-color">
+      <h2
+        class="text-[18px] mt-3 text-center text-secondary-color font-semibold"
+      >
         Allow the site to access your location to find nearby properties.
       </h2>
       <img
@@ -31,7 +33,9 @@
       "
       class="flex flex-col items-center text-center"
     >
-      <h2 class="font-bold text-[20px] mt-3 text-center text-secondary-color">
+      <h2
+        class="text-[18px] mt-3 text-center text-secondary-color font-semibold"
+      >
         There are no properties near you.
       </h2>
 
