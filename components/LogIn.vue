@@ -42,9 +42,7 @@
                 errMsg = false;
                 msg = true;
               })
-              .catch((error) => {
-                console.log(error);
-              });
+              .catch((error) => {});
           }
         "
       >
@@ -75,15 +73,20 @@ const pass = ref();
 const emits = defineEmits(["handleLogin"]);
 const msg = ref(false);
 const auth = getAuth();
+const route = useRoute();
 function submitFun(e) {
-  msg = false;
-  errMsg = false;
   e.preventDefault();
+  msg.value = false;
+  errMsg.value = false;
   signInWithEmailAndPassword(getAuth(), email.value, pass.value)
     .then((d) => {
       errMsg.value = "";
       useCookie("user").value = d.user.accessToken;
       emits("handleLogin");
+      navigateTo({
+        path: route.path,
+        query: { signIn: "true" },
+      });
     })
     .catch((err) => {
       console.group(err.message);

@@ -19,12 +19,10 @@ provide("GetLocation", GetLocation);
 provide("location", location);
 
 function GetLocation() {
-  console.log("location");
   const http = new XMLHttpRequest();
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        console.log(position);
         const APIR = `https://api-bdc.net/data/reverse-geocode?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&key=bdc_f317e5b3c98c4a04a97415f6b6a061c9`;
         http.open("GET", APIR);
         http.send();
